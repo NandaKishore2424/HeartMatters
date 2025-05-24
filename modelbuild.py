@@ -24,9 +24,6 @@ import joblib
 warnings.filterwarnings('ignore')
 
 def import_content(filepath):
-    mng_client = pymongo.MongoClient("mongodb+srv://shsarv:swatisahu@heart.9ynzc.mongodb.net/Heartpatientdatabase?retryWrites=true&w=majority")
-    mng_db = mng_client['Heartpatientdatabase'] 
-    collection_name = 'Heart_Data_new'
     db_cm = mng_db[collection_name]
     cdir = os.path.abspath('./')
     file_res = os.path.join(cdir, filepath)
